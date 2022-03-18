@@ -341,27 +341,27 @@ void nuc_eos_C_testing_temp_self_consistency()
    fprintf( stdout, "min pres: %9.7f\n", pres_min );
    fprintf( stdout, "max pres: %9.7f\n", pres_max );
 
-   fprintf( stdout, "Maximum relative error in energy mode       :  %10.8E\n", max_err[0] );
    fprintf( stdout, "Mean    relative error in energy mode       :  %10.8E\n", rel_err_array[0]/rel_err_number[0] );
+   fprintf( stdout, "Maximum relative error in energy mode       :  %10.8E\n", max_err[0] );
    fprintf( stdout, "-----------------------------------------------------------------------------\n" );
-   fprintf( stdout, "Maximum relative error is entropy mode      :  %10.8E\n", max_err[1] );
    fprintf( stdout, "Mean    relative error is entropy mode      :  %10.8E\n", rel_err_array[1]/rel_err_number[1] );
+   fprintf( stdout, "Maximum relative error is entropy mode      :  %10.8E\n", max_err[1] );
    fprintf( stdout, "-----------------------------------------------------------------------------\n" );
-   fprintf( stdout, "Maximum relative error is pressure mode     :  %10.8E\n", max_err[2] );
    fprintf( stdout, "Mean    relative error is pressure mode     :  %10.8E\n", rel_err_array[2]/rel_err_number[2] );
+   fprintf( stdout, "Maximum relative error is pressure mode     :  %10.8E\n", max_err[2] );
    fprintf( stdout, "-----------------------------------------------------------------------------\n" );
 
    fprintf( stdout, "fail in energy   mode %6d points and %8.6E %% in total\n", failcount1[0], 1.0e2*failcount1[0]/total_points );
    fprintf( stdout, "fail in entropy  mode %6d points and %8.6E %% in total\n", failcount1[1], 1.0e2*failcount1[1]/total_points );
    fprintf( stdout, "fail in pressure mode %6d points and %8.6E %% in total\n", failcount1[2], 1.0e2*failcount1[2]/total_points );
 
-   fprintf( stdout, "err>1e-10 in energy   mode %6d points and %8.6E %% in total\n", failcount2[0], 1.0e2*failcount2[0]/total_points );
-   fprintf( stdout, "err>1e-10 in entropy  mode %6d points and %8.6E %% in total\n", failcount2[1], 1.0e2*failcount2[1]/total_points );
-   fprintf( stdout, "err>1e-10 in pressure mode %6d points and %8.6E %% in total\n", failcount2[2], 1.0e2*failcount2[2]/total_points );
+   fprintf( stdout, "err>1e-16 in energy   mode %6d points and %8.6E %% in total\n", failcount2[0], 1.0e2*failcount2[0]/total_points );
+   fprintf( stdout, "err>1e-16 in entropy  mode %6d points and %8.6E %% in total\n", failcount2[1], 1.0e2*failcount2[1]/total_points );
+   fprintf( stdout, "err>1e-16 in pressure mode %6d points and %8.6E %% in total\n", failcount2[2], 1.0e2*failcount2[2]/total_points );
 
 
    return;
 
-} // FUNCTION : nuc_eos_C_testing
+} // FUNCTION : nuc_eos_C_testing_temp_self_consistency()
 
 #endif  // NUC_TABLE_MODE == NUC_TABLE_MODE_TEMP

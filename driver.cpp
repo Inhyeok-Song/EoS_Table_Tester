@@ -50,7 +50,6 @@ int main(void)
    fprintf( stdout, "Self Consistency Test\n" );
    #if   ( NUC_TABLE_MODE == NUC_TABLE_MODE_TEMP )
    nuc_eos_C_testing_temp_self_consistency();
-   // nuc_eos_C_testing_temp_self_consistency_2();
    #elif ( NUC_TABLE_MODE == NUC_TABLE_MODE_ENGY )
    nuc_eos_C_testing_engy_self_consistency();
    #endif
